@@ -6,7 +6,7 @@ import { styles } from './style';
 export function Home() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text>ToDo List App</Text>
       <StatusBar />
     </View>
   );
