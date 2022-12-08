@@ -30,4 +30,38 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: theme.colors.gray200
   },
+  form: {
+    //width: '100%',
+
+
+
+    flexDirection: 'row',
+    marginTop: -27,
+    marginRight: 24,
+    marginBottom: 32,
+    marginLeft: 24,
+  },
+  textInput: {
+    flex: 1,
+    height: 56,
+    backgroundColor: theme.colors.gray500,
+    borderRadius: 5,
+    color: '#FFF',
+
+    fontSize: 16,
+    padding: 16,
+    marginRight: 6,
+  },
+  button: {
+    width: 56,
+    height: 56,
+    borderRadius: 5,
+    backgroundColor: theme.colors.blueDark,
+
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  buttonText: {
+    color: '#FFF'
+  },
 });

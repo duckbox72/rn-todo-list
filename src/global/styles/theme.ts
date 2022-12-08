@@ -2,8 +2,8 @@ export default {
   colors: {
     purple: '#8484FA',
     purpleDark: '#5E60CE',
-    blue: '4EA8DE',
-    blueDark: '1E6F9F',
+    blue: '#4EA8DE',
+    blueDark: '#1E6F9F',
 
     gray700: '#0D0D0D',
     gray600: '#1A1A1A',
