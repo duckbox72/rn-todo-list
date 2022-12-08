@@ -1,11 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 
-import { styles } from './style';
+import { styles } from './styles';
 
 import theme from '../../global/styles/theme';
+import { Task } from '../../components/task';
 
 export function Home() {
+  const [tasks, setTasks] = useState<string[]>([]);
+  const [task, setTask] = useState('');
+
+
   return (
     <View style={styles.container}>
       <View style={styles.titleBackground}>
@@ -13,13 +18,14 @@ export function Home() {
           <Text style={styles.title}>ToDo App</Text>
         </View>
       </View>
+
       <View style={styles.form}>
         <TextInput
         style={styles.textInput}
         placeholder="Add a new task"
         placeholderTextColor={theme.colors.gray300}
-        //onChangeText={setTask}
-        //value={task}
+        onChangeText={setTask}
+        value={task}
         />
 
         <TouchableOpacity 
@@ -32,7 +38,15 @@ export function Home() {
         </TouchableOpacity>
       </View>
 
-      <Text style={{color: 'red'}}>ToDo List App</Text>
+      <View style={styles.countersContainer}>
+        <Text style={styles.counterCreated}>
+          Created 0
+        </Text>
+        <Text style={styles.counterConcluded}>
+          Concluded 0
+        </Text>
+      </View>
+
     </View>
   );
 }

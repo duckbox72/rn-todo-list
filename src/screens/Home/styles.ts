@@ -22,19 +22,16 @@ export const styles = StyleSheet.create({
   titleContainer: {
     width: 110,
     height:32,
-    alignItems: 'center',
-    justifyContent: 'center',
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     color: theme.colors.gray200
   },
+
   form: {
-    //width: '100%',
-
-
-
     flexDirection: 'row',
     marginTop: -27,
     marginRight: 24,
@@ -63,5 +60,26 @@ export const styles = StyleSheet.create({
   },
   buttonText: {
     color: '#FFF'
+  },
+
+  countersContainer: {
+
+    width: '100%',
+
+    paddingLeft: 24,
+    paddingRight: 24,
+
+    flexDirection: 'row',
+
+    justifyContent: 'space-between',
+  },
+  counterCreated: {
+    color: theme.colors.blueDark,
+    fontWeight: 'bold',
+    
+  },
+  counterConcluded: {
+    color: theme.colors.purpleDark,
+    fontWeight: 'bold',
   },
 });
