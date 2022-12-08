@@ -6,8 +6,13 @@ import { styles } from './style';
 export function Home() {
   return (
     <View style={styles.container}>
-      <Text>ToDo List App</Text>
-      <StatusBar />
+      <View style={styles.titleBackground}>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>ToDo App</Text>
+        </View>
+      </View>
+
+      <Text style={{color: 'red'}}>ToDo List App</Text>
     </View>
   );
 }
