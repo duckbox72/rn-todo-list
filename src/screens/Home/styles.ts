@@ -30,6 +30,10 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: theme.colors.gray200
   },
+  titleImage: {
+    width: 110,
+    height: 32,
+  },
 
   form: {
     flexDirection: 'row',

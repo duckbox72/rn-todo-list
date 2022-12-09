@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 
 import { styles } from './styles';
 
 import theme from '../../global/styles/theme';
 import { Task } from '../../components/task';
+
+
 
 export function Home() {
   const [tasks, setTasks] = useState<string[]>([]);
@@ -15,7 +17,10 @@ export function Home() {
     <View style={styles.container}>
       <View style={styles.titleBackground}>
         <View style={styles.titleContainer}>
-          <Text style={styles.title}>ToDo App</Text>
+          <Image 
+            style={styles.titleImage}
+            source={require('../../assets/Logo.png')}
+          />
         </View>
       </View>
 
