@@ -37,8 +37,10 @@ export function Home() {
           style={styles.button}
           //onPress={handleTaskAdd}
         >
-          <Text style={styles.buttonText}>
-            +
+          <Text style={styles.buttonPlus}>
+            <Image 
+             source={require('../../assets/plus.png')}
+            />
           </Text>
         </TouchableOpacity>
       </View>

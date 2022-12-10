@@ -22,13 +22,6 @@ export const styles = StyleSheet.create({
   titleContainer: {
     width: 110,
     height:32,
-    // alignItems: 'center',
-    // justifyContent: 'center',
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: theme.colors.gray200
   },
   titleImage: {
     width: 110,
@@ -62,8 +55,9 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  buttonText: {
-    color: '#FFF'
+  buttonPlus: {
+    marginBottom: -8,
+
   },
 
   countersContainer: {
