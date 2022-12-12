@@ -101,6 +101,28 @@ export const styles = StyleSheet.create({
     fontWeight: '600',
   },
 
-  
+  listEmptyComponentContainer: {
+    width: '88%',
+    
+    borderTopColor: theme.colors.gray400,
+    borderTopWidth: .5,
+
+    alignItems: 'center',
+  },
+  listEmptyImage: {
+    width: 56,
+    height: 56,
+
+    marginTop: 46,
+    marginBottom: 16,
+  },
+  listEmptyTextTop: {
+    color: theme.colors.gray300,
+
+    fontWeight: 'bold',
+  },
+  listEmptyTextBottom: {
+    color: theme.colors.gray300
+  },
 
 });

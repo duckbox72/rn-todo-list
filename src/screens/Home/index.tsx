@@ -70,11 +70,19 @@ export function Home() {
         </View>
       </View>
 
-      {/* <View style={}>
-
-      </View> */}
-
+      <View style={styles.listEmptyComponentContainer}>
+          <Image 
+            style={styles.listEmptyImage}
+            source={require('../../assets/Clipboard.png')}
+          />
+          <Text style={styles.listEmptyTextTop}>
+            You still don't have any tasks added
+          </Text>
+          <Text style={styles.listEmptyTextBottom}>
+            Create tasks and organize your to do
+          </Text>
+      </View>
     </View>
   );
-}
+}2
 
