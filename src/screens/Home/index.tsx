@@ -15,6 +15,7 @@ export function Home() {
 
   return (
     <View style={styles.container}>
+      
       <View style={styles.titleBackground}>
         <View style={styles.titleContainer}>
           <Image 
@@ -45,14 +46,33 @@ export function Home() {
         </TouchableOpacity>
       </View>
 
-      <View style={styles.countersContainer}>
-        <Text style={styles.counterCreated}>
-          Created 0
-        </Text>
-        <Text style={styles.counterConcluded}>
-          Concluded 0
-        </Text>
+      <View style={styles.gaugesContainer}>
+        <View style={styles.counterContainer}>
+          <Text style={styles.counterCreatedText}>
+            Created
+          </Text>
+          <View style={styles.counterValueContainer}>
+            <Text style={styles.counterValueText}>
+              0
+            </Text>
+          </View>
+        </View>
+
+        <View style={styles.counterContainer}>
+          <Text style={styles.counterConcludedText}>
+            Concluded
+          </Text>
+          <View style={styles.counterValueContainer}>
+            <Text style={styles.counterValueText}>
+              0
+            </Text>
+          </View>
+        </View>
       </View>
+
+      {/* <View style={}>
+
+      </View> */}
 
     </View>
   );

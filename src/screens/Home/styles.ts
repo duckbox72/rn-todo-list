@@ -60,8 +60,7 @@ export const styles = StyleSheet.create({
 
   },
 
-  countersContainer: {
-
+  gaugesContainer: {
     width: '100%',
 
     paddingLeft: 24,
@@ -73,13 +72,35 @@ export const styles = StyleSheet.create({
 
     marginBottom: 20,
   },
-  counterCreated: {
+  counterContainer: {
+    flexDirection: 'row',
+  },
+  counterCreatedText: {
     color: theme.colors.blueDark,
     fontWeight: 'bold',
-    
   },
-  counterConcluded: {
+  counterConcludedText: {
     color: theme.colors.purpleDark,
     fontWeight: 'bold',
   },
+  counterValueContainer: {
+    width: 25,
+    height: 19,
+
+    alignItems: 'center',
+    justifyContent: 'center',
+
+    borderRadius: 8,
+    marginLeft: 8,
+
+    backgroundColor: theme.colors.gray400,
+  },
+  counterValueText: {
+    color: theme.colors.gray100,
+    fontSize: 12,
+    fontWeight: '600',
+  },
+
+  
+
 });
