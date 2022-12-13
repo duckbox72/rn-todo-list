@@ -4,9 +4,8 @@ import theme from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
   container: {
-    width: '88%',
+    width: 345,
     minHeight: 64,
-    
     borderRadius: 6,
     marginBottom: 8,
 

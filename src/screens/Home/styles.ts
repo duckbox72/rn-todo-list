@@ -5,9 +5,9 @@ import theme from '../../global/styles/theme';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width: '100%',
     backgroundColor: theme.colors.gray600,
     alignItems: 'center',
-    //justifyContent: 'center',
   },
   titleBackground: {
     width: '100%',
@@ -102,7 +102,7 @@ export const styles = StyleSheet.create({
   },
 
   listEmptyComponentContainer: {
-    width: '88%',
+    width: 345,
     
     borderTopColor: theme.colors.gray400,
     borderTopWidth: .5,
