@@ -79,7 +79,7 @@ export const styles = StyleSheet.create({
     color: theme.colors.blueDark,
     fontWeight: 'bold',
   },
-  counterConcludedText: {
+  counterCompletedText: {
     color: theme.colors.purpleDark,
     fontWeight: 'bold',
   },

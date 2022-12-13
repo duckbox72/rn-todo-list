@@ -59,8 +59,8 @@ export function Home() {
         </View>
 
         <View style={styles.counterContainer}>
-          <Text style={styles.counterConcludedText}>
-            Concluded
+          <Text style={styles.counterCompletedText}>
+            Completed
           </Text>
           <View style={styles.counterValueContainer}>
             <Text style={styles.counterValueText}>
@@ -70,7 +70,7 @@ export function Home() {
         </View>
       </View>
 
-      <View style={styles.listEmptyComponentContainer}>
+      {/* <View style={styles.listEmptyComponentContainer}>
           <Image 
             style={styles.listEmptyImage}
             source={require('../../assets/Clipboard.png')}
@@ -81,7 +81,11 @@ export function Home() {
           <Text style={styles.listEmptyTextBottom}>
             Create tasks and organize your to do
           </Text>
-      </View>
+      </View> */}
+
+      <Task />
+      <Task />
+      <Task />
     </View>
   );
 }2
