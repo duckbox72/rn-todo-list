@@ -31,6 +31,11 @@ export const styles = StyleSheet.create({
     borderColor: theme.colors.blue,
 
   },
+  completeCompleted: {
+    flex: 1,
+    borderRadius: 50,
+    backgroundColor: theme.colors.purpleDark
+  },
   taskContainer: {
     width: '72%',
   },

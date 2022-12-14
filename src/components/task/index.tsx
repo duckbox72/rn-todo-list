@@ -10,7 +10,9 @@ export function Task() {
       <View style={styles.completedButtonContainer}>
         <TouchableOpacity 
           style={styles.completedButton}
-        /> 
+        >
+          <View style={styles.completeCompleted} />
+        </TouchableOpacity> 
       </View>
       
       <View style={styles.taskContainer}>
