@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, FlatList } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Image, FlatList, Alert } from 'react-native';
 
 import { styles } from './styles';
 
@@ -9,9 +9,25 @@ import { Task } from '../../components/task';
 
 
 export function Home() {
-  const [tasks, setTasks] = useState<string[]>(['']);
+  const [tasks, setTasks] = useState<string[]>([]);
   const [task, setTask] = useState('');
 
+  function handleAddTask() {
+    if(tasks.includes(task)) {
+      return Alert.alert('Task already exists!');
+    }
+
+    setTasks(prevState => [...prevState, task]);
+    setTask('');
+  };
+
+  function handleCompleteTask () {
+
+  };
+
+  function handledeleteTask() {
+
+  };
 
   return (
     <View style={styles.container}>
@@ -36,7 +52,7 @@ export function Home() {
 
         <TouchableOpacity 
           style={styles.button}
-          //onPress={handleTaskAdd}
+          onPress={handleAddTask}
         >
           <Text style={styles.buttonPlus}>
             <Image 
@@ -70,13 +86,16 @@ export function Home() {
         </View>
       </View>
 
-      
-
       <FlatList 
         data={tasks}
         keyExtractor={item => item}
-        renderItem={(item) => (
-          <Task />
+        renderItem={({ item }) => (
+          <Task 
+            key={item}
+            task={item}
+            onComplete={() => {}}
+            onRemove={() => {}}
+          />
         )}
         showsVerticalScrollIndicator={false}
         ListEmptyComponent={() => (

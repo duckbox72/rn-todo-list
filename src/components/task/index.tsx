@@ -3,7 +3,13 @@ import { Text, TouchableOpacity, View, Image } from 'react-native';
 
 import { styles } from "./styles";
 
-export function Task() {
+type Props = {
+  task: string;
+  onComplete: () => void;
+  onRemove: () => void;
+}
+
+export function Task({ task, onComplete, onRemove}: Props) {
 
   return(
     <View style={styles.container}>
@@ -17,9 +23,7 @@ export function Task() {
       
       <View style={styles.taskContainer}>
         <Text style={styles.task}>
-          adjkalsdj  lkdjalk alkd
-           alskdjal  adlkja asdlka ladja l alsdja 
-           ouat pouarba yup 
+          {task} 
         </Text>
       </View>
 
