@@ -28,7 +28,9 @@ export function Task({ task, onComplete, onRemove}: Props) {
       </View>
 
       <View style={styles.deleteTaskContainer}>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={onRemove}
+        >
           <Image 
             source={require('../../assets/Vector.png')}
           /> 

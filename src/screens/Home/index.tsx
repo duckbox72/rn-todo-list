@@ -13,6 +13,9 @@ export function Home() {
   const [task, setTask] = useState('');
 
   function handleAddTask() {
+    if(task === '') {
+      return Alert.alert('Please add a task!');
+    }
     if(tasks.includes(task)) {
       return Alert.alert('Task already exists!');
     }
@@ -25,8 +28,17 @@ export function Home() {
 
   };
 
-  function handledeleteTask() {
-
+  function handleRemoveTask(item: string) {
+    Alert.alert("Remove Task", `Remove ${item} from ToDo?`, [
+      {
+        text: 'Yes',
+        onPress: () => setTasks(prevState => prevState.filter(task => task !== item))
+      },
+      {
+        text: 'No',
+        style: 'cancel'
+      }
+    ])
   };
 
   return (
@@ -69,7 +81,7 @@ export function Home() {
           </Text>
           <View style={styles.counterValueContainer}>
             <Text style={styles.counterValueText}>
-              0
+              {tasks.length}
             </Text>
           </View>
         </View>
@@ -94,7 +106,7 @@ export function Home() {
             key={item}
             task={item}
             onComplete={() => {}}
-            onRemove={() => {}}
+            onRemove={() => handleRemoveTask(item)}
           />
         )}
         showsVerticalScrollIndicator={false}
@@ -108,7 +120,7 @@ export function Home() {
               You still don't have any tasks added
             </Text>
             <Text style={styles.listEmptyTextBottom}>
-              Create tasks and organize your to do
+              Create tasks and organize your todos
             </Text>
           </View>
         )}
