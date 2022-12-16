@@ -42,6 +42,9 @@ export const styles = StyleSheet.create({
   task: {
     color: theme.colors.gray100,
   },
+  completedTask: {
+    color: theme.colors.gray300,
+  },
   deleteTaskContainer: {
     width: '14%',
     alignItems: 'center',

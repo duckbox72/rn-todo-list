@@ -6,8 +6,6 @@ import { styles } from './styles';
 import theme from '../../global/styles/theme';
 import { Task } from '../../components/task';
 
-
-
 export function Home() {
   const [tasks, setTasks] = useState<string[]>([]);
   const [task, setTask] = useState('');
@@ -16,16 +14,16 @@ export function Home() {
     if(task === '') {
       return Alert.alert('Please add a task!');
     }
+
     if(tasks.includes(task)) {
       return Alert.alert('Task already exists!');
     }
 
     setTasks(prevState => [...prevState, task]);
-    setTask('');
   };
 
   function handleCompleteTask () {
-
+    console.log('COMPLETE');
   };
 
   function handleRemoveTask(item: string) {
@@ -104,9 +102,8 @@ export function Home() {
         renderItem={({ item }) => (
           <Task 
             key={item}
-            task={item}
-            onComplete={() => {}}
             onRemove={() => handleRemoveTask(item)}
+            task={item}
           />
         )}
         showsVerticalScrollIndicator={false}
@@ -128,5 +125,5 @@ export function Home() {
     </View>
 
   );
-}2
+}
 
