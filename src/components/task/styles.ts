@@ -23,7 +23,6 @@ export const styles = StyleSheet.create({
   completedButton: {
     width: 18,
     height: 18,
-    //backgroundColor: theme.colors.purple,
 
     borderStyle: 'solid',
     borderRadius: 50,
@@ -43,7 +42,7 @@ export const styles = StyleSheet.create({
     color: theme.colors.gray100,
   },
   completedTask: {
-    color: theme.colors.gray300,
+    color: theme.colors.purple,
   },
   deleteTaskContainer: {
     width: '14%',
@@ -51,6 +50,5 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   deleteTask: {
-
   }
 });
