@@ -6,21 +6,25 @@ import { styles } from "./styles";
 type Props = {
   task: string;
   onRemove: () => void;
+  onComplete: () => void;
 }
 
-export function Task({ task, onRemove}: Props) {
+export function Task({ task, onRemove, onComplete }: Props) {
   const [isCompleted, setIsCompleted] = useState(false);
 
   function handleCompleteTask() {
-    setIsCompleted(true);
+    setIsCompleted(true); 
+    onComplete();
   }
 
+  
   return(
     <View style={styles.container}>
       <View style={styles.completedButtonContainer}>
         <TouchableOpacity 
           style={styles.completedButton}
           onPress={handleCompleteTask}
+          disabled={isCompleted}
         >
         {isCompleted
           ? <View style={styles.completeCompleted} />

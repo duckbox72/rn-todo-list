@@ -8,6 +8,7 @@ import { Task } from '../../components/task';
 
 export function Home() {
   const [tasks, setTasks] = useState<string[]>([]);
+  const [isCompleted, setIsCompleted] = useState<string[]>([]);
   const [task, setTask] = useState('');
 
   function handleAddTask() {
@@ -22,15 +23,19 @@ export function Home() {
     setTasks(prevState => [...prevState, task]);
   };
 
-  function handleCompleteTask () {
-    console.log('COMPLETE');
+  function handleCompleteTask (item: string) {
+    setTasks(prevState => prevState.filter(task => task !== item));
+    setIsCompleted(prevState => [...prevState, task]);
   };
 
   function handleRemoveTask(item: string) {
     Alert.alert("Remove Task", `Remove ${item} from ToDo?`, [
       {
         text: 'Yes',
-        onPress: () => setTasks(prevState => prevState.filter(task => task !== item))
+        onPress: () => {
+          setTasks(prevState => prevState.filter(task => task !== item));
+          setIsCompleted(prevState => prevState.filter(task => task !== item));
+        }
       },
       {
         text: 'No',
@@ -79,7 +84,7 @@ export function Home() {
           </Text>
           <View style={styles.counterValueContainer}>
             <Text style={styles.counterValueText}>
-              {tasks.length}
+              {tasks.length + isCompleted.length}
             </Text>
           </View>
         </View>
@@ -90,19 +95,20 @@ export function Home() {
           </Text>
           <View style={styles.counterValueContainer}>
             <Text style={styles.counterValueText}>
-              0
+              {isCompleted.length}
             </Text>
           </View>
         </View>
       </View>
 
       <FlatList 
-        data={tasks}
+        data={[...tasks, ...isCompleted]}
         keyExtractor={item => item}
         renderItem={({ item }) => (
           <Task 
             key={item}
             onRemove={() => handleRemoveTask(item)}
+            onComplete={() => handleCompleteTask(item)}
             task={item}
           />
         )}
