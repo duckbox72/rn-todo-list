@@ -24,8 +24,9 @@ export function Home() {
   };
 
   function handleCompleteTask (item: string) {
+    setIsCompleted(prevState => [...prevState, item]);
     setTasks(prevState => prevState.filter(task => task !== item));
-    setIsCompleted(prevState => [...prevState, task]);
+    
   };
 
   function handleRemoveTask(item: string) {
